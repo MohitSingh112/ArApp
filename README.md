@@ -34,10 +34,6 @@ com.example.arapp/
 │ ├── cone.glb
 │ └── sphere.glb
 
-yaml
-Copy
-Edit
-
 ---
 
 ## 🚀 Getting Started
@@ -61,10 +57,6 @@ app/src/main/assets/models/
 ├── cone.glb
 └── sphere.glb
 
-yaml
-Copy
-Edit
-
 3. Open the project in Android Studio.
 4. Connect an ARCore-supported device.
 5. Build and run the app.
@@ -75,18 +67,18 @@ Edit
 
 In your `build.gradle.kts`:
 
-```kotlin
+```
 implementation("com.google.ar:core:1.41.0")
 implementation("io.github.sceneview:arsceneview:0.10.0")
 Gradle Plugin (Kotlin DSL):
 
-kotlin
-Copy
-Edit
+```
+```
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
 }
+```
 🎮 How to Use
 Launch the app.
 
@@ -111,9 +103,9 @@ Tap again to move the marker to a new location.
 🌐 Fallback Models
 If the app fails to load the local .glb model, it fetches a fallback from the Khronos glTF Sample Models repository:
 
-Box.glb → Cube
+cube.glb → Cube
 
-Cylinder.glb → Cone
+cone.glb → Cone
 
 Sphere.glb → Sphere
 
@@ -130,20 +122,10 @@ Double-check file names: cube.glb, cone.glb, sphere.glb
 
 Verify they are in src/main/assets/models/
 
-📸 Screenshots
-You can add app screenshots or AR placement images here.
 
 📄 License
 This project is provided for educational and demo purposes. You are free to modify and use it with proper attribution.
 
 Created with ❤️ using ARCore, SceneView, and Kotlin
 
-python
-Copy
-Edit
-
 ---
-
-✅ Now just save this content in a file named `README.md` inside your project root, and you're good to go!
-
-Let me know if you'd like a version with GitHub badges, project status, or links.
