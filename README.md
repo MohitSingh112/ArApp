@@ -89,20 +89,14 @@ Launch the app.
 
 1. Select a drill from the dropdown:
 
-Drill 1: Basic Placement (Cube)
-
-Drill 2: Advanced Placement (Cone)
-
-Drill 3: Expert Placement (Sphere)
+  a. Drill 1: Basic Placement (Cube)
+  b. Drill 2: Advanced Placement (Cone)
+  c. Drill 3: Expert Placement (Sphere)
 
 2. Read the instructions.
-
 3. Tap Start AR Drill.
-
 4. Move your phone slowly to detect a horizontal surface.
-
 5. Tap to place a marker.
-
 6. Tap again to move the marker to a new location.
 
 ---
