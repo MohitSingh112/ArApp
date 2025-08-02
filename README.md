@@ -11,7 +11,7 @@
 - 🧱 **Model Variants**:
   - 🟥 **Cube** for Basic Drill
   - 🟩 **Cone** for Advanced Drill
-  - 🟦 **Sphere** for Expert Drill
+  - 🟦 **Crow** for Expert Drill
 - 💡 **Tips and Instructions**: Contextual drill tips and placement instructions.
 - 🔁 **Replace Placement**: Tap again to move the drill marker to a new location.
 
