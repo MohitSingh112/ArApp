@@ -80,10 +80,14 @@ implementation("com.google.ar:core:1.41.0")
 implementation("io.github.sceneview:arsceneview:0.10.0")
 
 ```
-🎮 How to Use
+
+---
+
+## 🎮 How to Use
+
 Launch the app.
 
-Select a drill from the dropdown:
+1. Select a drill from the dropdown:
 
 Drill 1: Basic Placement (Cube)
 
@@ -91,17 +95,20 @@ Drill 2: Advanced Placement (Cone)
 
 Drill 3: Expert Placement (Sphere)
 
-Read the instructions.
+2. Read the instructions.
 
-Tap Start AR Drill.
+3. Tap Start AR Drill.
 
-Move your phone slowly to detect a horizontal surface.
+4. Move your phone slowly to detect a horizontal surface.
 
-Tap to place a marker.
+5. Tap to place a marker.
 
-Tap again to move the marker to a new location.
+6. Tap again to move the marker to a new location.
 
-🌐 Fallback Models
+---
+
+## 🌐 Fallback Models
+
 If the app fails to load the local .glb model, it fetches a fallback from the Khronos glTF Sample Models repository:
 
 cube.glb → Cube
@@ -110,7 +117,10 @@ cone.glb → Cone
 
 Sphere.glb → Sphere
 
-🛠️ Troubleshooting
+---
+
+## 🛠️ Troubleshooting
+
 ✅ Make sure Google Play Services for AR is installed and updated.
 
 ✅ Grant Camera Permission at runtime.
@@ -123,8 +133,10 @@ Double-check file names: cube.glb, cone.glb, sphere.glb
 
 Verify they are in src/main/assets/models/
 
+---
 
-📄 License
+## 📄 License
+
 This project is provided for educational and demo purposes. You are free to modify and use it with proper attribution.
 
 Created with ❤️ using ARCore, SceneView, and Kotlin
