@@ -81,9 +81,9 @@ class ARActivity : AppCompatActivity() {
                     }
                 }
                 1 -> {
-                    // Green Cone for Advanced Drill
+                    // Advanced Drill
                     loadModelGlbAsync(
-                        glbFileLocation = "models/cone.glb",
+                        glbFileLocation = "models/takopi.glb",
                         autoAnimate = false,
                         scaleToUnits = 0.15f,
                         centerOrigin = null
@@ -91,22 +91,22 @@ class ARActivity : AppCompatActivity() {
                         if (modelInstance == null) {
                             createPrimitiveModel("cone")
                         } else {
-                            Toast.makeText(this@ARActivity, "Cone marker placed!", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@ARActivity, "takopi placed!", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }
                 2 -> {
-                    // Blue Sphere for Expert Drill
+                    // Expert Drill
                     loadModelGlbAsync(
-                        glbFileLocation = "models/sphere.glb",
-                        autoAnimate = false,
-                        scaleToUnits = 0.08f,
+                        glbFileLocation = "models/crow.glb",
+                        autoAnimate = true,
+                        scaleToUnits = 0.2f,
                         centerOrigin = null
                     ) { modelInstance ->
                         if (modelInstance == null) {
                             createPrimitiveModel("sphere")
                         } else {
-                            Toast.makeText(this@ARActivity, "Sphere marker placed!", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@ARActivity, "crow placed!", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }
