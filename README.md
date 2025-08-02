@@ -1,95 +1,149 @@
-📱 ARApp — Drill Placement in Augmented Reality
-ARApp is an Android application that uses ARCore and SceneView to let users practice object placement drills in Augmented Reality. Users can select from three drills (Basic, Advanced, Expert), each with a unique 3D model that can be placed on detected surfaces using their device's camera.
+# 📱 ARApp — Drill Placement in Augmented Reality
 
-🧠 Features
-🔍 Surface Detection: Automatically detects horizontal planes.
+**ARApp** is an Android application that uses **ARCore** and **SceneView** to let users practice object placement drills in Augmented Reality. Users can select from three drills (Basic, Advanced, Expert), each with a unique 3D model that can be placed on detected surfaces using their device's camera.
 
-🎯 Drill Marker Placement: Tap to place drill markers on detected planes.
+---
 
-🧱 Model Variants:
+## 🧠 Features
 
-Cube for Basic Drill
+- 🔍 **Surface Detection**: Automatically detects horizontal planes.
+- 🎯 **Drill Marker Placement**: Tap to place drill markers on detected planes.
+- 🧱 **Model Variants**:
+  - 🟥 **Cube** for Basic Drill
+  - 🟩 **Cone** for Advanced Drill
+  - 🟦 **Sphere** for Expert Drill
+- 💡 **Tips and Instructions**: Contextual drill tips and placement instructions.
+- 🔁 **Replace Placement**: Tap again to move the drill marker to a new location.
 
-Cone for Advanced Drill
+---
 
-Sphere for Expert Drill
+## 📁 Project Structure
 
-💡 Tips and Instructions: Contextual drill tips and placement instructions.
+com.example.arapp/
+├── MainActivity.kt # Drill selection screen
+├── DrillDetailActivity.kt # Drill info and start AR experience
+├── ARActivity.kt # Main AR experience with model placement
+├── res/
+│ └── layout/
+│ ├── activity_main.xml
+│ ├── activity_drill_detail.xml
+│ └── activity_ar.xml
+├── assets/
+│ └── models/
+│ ├── cube.glb
+│ ├── cone.glb
+│ └── sphere.glb
 
-🔁 Replace Placement: Tap again to move the drill marker to a new location.
-
-📁 Project Structure
-plaintext
+yaml
 Copy
 Edit
-com.example.arapp/
-├── MainActivity.kt             # Drill selection screen
-├── DrillDetailActivity.kt     # Drill info and start AR experience
-├── ARActivity.kt              # Main AR experience with model placement
-├── res/
-│   └── layout/
-│       ├── activity_main.xml
-│       ├── activity_drill_detail.xml
-│       └── activity_ar.xml
-├── assets/
-│   └── models/
-│       ├── cube.glb
-│       ├── cone.glb
-│       └── sphere.glb
-🚀 Getting Started
-Prerequisites
-Android Studio Electric Eel or newer
 
-Android device that supports ARCore
+---
 
-minSdk 24 and targetSdk 35
+## 🚀 Getting Started
 
-Internet access (fallback models load from GitHub)
+### Prerequisites
 
-Dependencies
+- ✅ Android Studio Electric Eel or newer
+- ✅ Android device that supports ARCore
+- ✅ Internet connection (for fallback models)
+- ✅ Minimum SDK version: 24
+
+---
+
+## 🔧 Installation
+
+1. Clone this repository or copy the code into your Android Studio project.
+2. Create the following directory and place your 3D models:
+
+app/src/main/assets/models/
+├── cube.glb
+├── cone.glb
+└── sphere.glb
+
+yaml
+Copy
+Edit
+
+3. Open the project in Android Studio.
+4. Connect an ARCore-supported device.
+5. Build and run the app.
+
+---
+
+## 📦 Dependencies
+
+In your `build.gradle.kts`:
+
+```kotlin
+implementation("com.google.ar:core:1.41.0")
+implementation("io.github.sceneview:arsceneview:0.10.0")
+Gradle Plugin (Kotlin DSL):
+
 kotlin
 Copy
 Edit
-implementation 'com.google.ar:core:1.41.0'
-implementation 'io.github.sceneview:arsceneview:0.10.0'
-Setup
-Clone the repo or copy the source files into your Android Studio project.
-
-Place your .glb models in src/main/assets/models/.
-
-Connect an ARCore-supported device.
-
-Build & Run on the device.
-
-🎮 Usage
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.jetbrains.kotlin.android)
+}
+🎮 How to Use
 Launch the app.
 
-Select a drill type from the dropdown.
+Select a drill from the dropdown:
 
-Read the drill instructions.
+Drill 1: Basic Placement (Cube)
 
-Tap “Start AR Drill”.
+Drill 2: Advanced Placement (Cone)
 
-Scan for a surface.
+Drill 3: Expert Placement (Sphere)
 
-Tap to place your marker model.
+Read the instructions.
 
-📸 Screenshots
-(You can add screenshots here later to illustrate UI and AR views.)
+Tap Start AR Drill.
 
-📦 Fallbacks
-If the .glb model fails to load from assets, the app loads a primitive shape from:
+Move your phone slowly to detect a horizontal surface.
 
-📦 Khronos glTF Sample Models Repository
+Tap to place a marker.
+
+Tap again to move the marker to a new location.
+
+🌐 Fallback Models
+If the app fails to load the local .glb model, it fetches a fallback from the Khronos glTF Sample Models repository:
+
+Box.glb → Cube
+
+Cylinder.glb → Cone
+
+Sphere.glb → Sphere
 
 🛠️ Troubleshooting
-✅ Ensure Google Play Services for AR is installed and up to date.
+✅ Make sure Google Play Services for AR is installed and updated.
 
-✅ Grant camera permission at runtime.
+✅ Grant Camera Permission at runtime.
 
-✅ Use an ARCore-compatible device.
+✅ Only run on physical Android devices (not emulators).
 
-❌ Not compatible with emulators.
+🔄 If models aren't showing:
+
+Double-check file names: cube.glb, cone.glb, sphere.glb
+
+Verify they are in src/main/assets/models/
+
+📸 Screenshots
+You can add app screenshots or AR placement images here.
 
 📄 License
-This project is for educational/demo purposes. You can adapt and expand upon it freely.
+This project is provided for educational and demo purposes. You are free to modify and use it with proper attribution.
+
+Created with ❤️ using ARCore, SceneView, and Kotlin
+
+python
+Copy
+Edit
+
+---
+
+✅ Now just save this content in a file named `README.md` inside your project root, and you're good to go!
+
+Let me know if you'd like a version with GitHub badges, project status, or links.
