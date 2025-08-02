@@ -19,6 +19,8 @@
 
 ## 📁 Project Structure
 
+
+```
 com.example.arapp/
 ├── MainActivity.kt # Drill selection screen
 ├── DrillDetailActivity.kt # Drill info and start AR experience
@@ -33,6 +35,8 @@ com.example.arapp/
 │ ├── cube.glb
 │ ├── cone.glb
 │ └── sphere.glb
+
+```
 
 ---
 
@@ -52,10 +56,14 @@ com.example.arapp/
 1. Clone this repository or copy the code into your Android Studio project.
 2. Create the following directory and place your 3D models:
 
+
+```
 app/src/main/assets/models/
 ├── cube.glb
 ├── cone.glb
 └── sphere.glb
+
+```
 
 3. Open the project in Android Studio.
 4. Connect an ARCore-supported device.
@@ -70,14 +78,7 @@ In your `build.gradle.kts`:
 ```
 implementation("com.google.ar:core:1.41.0")
 implementation("io.github.sceneview:arsceneview:0.10.0")
-Gradle Plugin (Kotlin DSL):
 
-```
-```
-plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.jetbrains.kotlin.android)
-}
 ```
 🎮 How to Use
 Launch the app.
